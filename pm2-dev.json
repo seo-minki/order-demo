@@ -1,0 +1,16 @@
+{
+    "apps": [{
+        "name"            : "dev-payssam-front-order",
+        "script"          : "node serve.js",
+        "watch"           : false,
+        "ignore_watch"    : ["node_modules", "log"],
+        "exec_mode"       : "fork", // cluster
+        "instances"       : 1,
+        "error_file"      : "log/err.log",
+        "out_file"        : "log/out.log",
+        "log_file"        : "log/console.log",
+        "log_date_format" : "YYYY-MM-DD HH:mm:ss",
+        "merge_logs"      : false
+
+    }]
+}
