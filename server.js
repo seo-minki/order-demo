@@ -1,9 +1,7 @@
-var express = require('express');
-var app = express();
-//const https = require('https');
+const express = require('express');
+const app = express();
 const https = require('http');
-var fs = require('fs');
-var path = require('path');
+const path = require('path');
 
 app.disable('x-powered-by')
 
