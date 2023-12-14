@@ -1,30 +1,15 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+
 const app = express();
-const https = require('http');
-const path = require('path');
 
-app.disable('x-powered-by')
+app.set("port", process.env.PORT || 10021);
 
-const allowedMethods = ['GET', 'POST']
-app.use((req, res, next) => {
-    if (!allowedMethods.includes(req.method))
-        return res.status(405).send('Method Not Allowed')
 
-    return next()
-})
-
-// Serve static assets
-app.use(express.static(path.resolve(__dirname, '.', 'dist')));
-
-// Always return the main index.html, so react-router render the route in the client
-
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '.', 'dist', 'index.html'));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist"));
 });
 
-//https.createServer(option, app).listen(10010, function() {
-//  console.log("HTTPS server listening on port " + 7010);
-//})
-https.createServer(app).listen(10021, function() {
-    console.log('Start Payssam Order on port 10021')
+app.listen(app.get("port"), () => {
+    console.log(app.get("port"), "번 포트에서 대기중..");
 });
