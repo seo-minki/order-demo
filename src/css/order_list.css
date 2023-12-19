@@ -26,9 +26,9 @@
 .product_options_popup{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 100;}
 .product_options_popup .product_options_popup_wrapper{width: 100%; height: 100%; padding: 24px; display: flex; align-items: center; justify-content: center}
 .product_options_popup .product_options_popup_inner_wrapper{background-color: #ffffff; width: 100%; max-width: 640px; height: 100%; max-height: 1000px; border-radius: 16px; position: relative; padding: 0 16px 24px; overflow-y: hidden}
-.product_options_popup_header{position: absolute; left: 0; top: 0; width: 100%; height: 56px; background-color: #f9bec7; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-radius: 12px 12px 0 0; color: #ffffff}
+.product_options_popup_header{position: absolute; z-index: 999; left: 0; top: 0; width: 100%; height: 56px; background-color: #f9bec7; display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-radius: 12px 12px 0 0; color: #ffffff}
 .product_options_popup_header button{width: 32px; height: 32px; text-indent: -9999px; background: url("../images/btn_32_close_wh.png") no-repeat center; background-size: contain}
-.product_options_popup_inner_wrapper .product_options{height: 100%; overflow-y: auto; padding-bottom: 170px; -ms-overflow-style: none; /* 인터넷 익스플로러 */scrollbar-width: none; /* 파이어폭스 */}
+.product_options_popup_inner_wrapper .product_options{height: 100%; overflow-y: auto; position: relative; z-index: 1; padding-bottom: 170px; -ms-overflow-style: none; /* 인터넷 익스플로러 */scrollbar-width: none; /* 파이어폭스 */}
 .product_options_popup_inner_wrapper .product_options::-webkit-scrollbar {display: none;}
 .product_options_popup_inner_wrapper .product_image{margin-top: 80px; width: 100%; height: 300px; background-size: contain; background-repeat: no-repeat; background-position: center}
 .product_options_popup_inner_wrapper .options_title{text-align: center; margin: 20px 0}
@@ -43,14 +43,14 @@
 .product_options_popup_inner_wrapper .options .divide_into_1{width: 100%}
 .product_options_popup_inner_wrapper textarea{resize: none; width: 100%; height: 200px; border: 2px solid #faeaec; border-radius: 12px; padding: 16px; font-size: 20px}
 
-.order_button_wrap{position: absolute; left: 0; bottom: 0; width: 100%; height: 170px; border-radius: 0 0 12px 12px; background-color: #faf2f3;}
+.order_button_wrap{position: absolute; z-index: 10; left: 0; bottom: 0; width: 100%; height: 170px; border-radius: 0 0 12px 12px; background-color: #faf2f3;}
 .order_button_wrap p{text-align: center; padding: 15px 0; font-size: 16px; color: #2b2b2b}
 .order_button_wrap .button_wrap{display: flex; align-items: center; height: 72px;}
 .order_button_wrap .button_wrap button{width: 100%; height: 100%; color: #ffffff; font-size: 20px; background-color: #fbb1bd}
 .order_button_wrap button:disabled{background-color: #e5e5e5; pointer-events: none}
 .order_button_wrap .button_wrap button:hover{background-color: #ff99ac}
 .order_button_wrap .quantity_button_wrap{display: flex;align-items: center; justify-content: center; height: 50px;}
-.order_button_wrap .quantity_button_wrap button{display: flex;align-items: center; justify-content: center; width: 25px; height: 25px; font-size: 16px;}
+.order_button_wrap .quantity_button_wrap button{display: flex;align-items: center; justify-content: center; width: 25px; height: 25px; font-size: 16px; color: #2b2b2b}
 .order_button_wrap .quantity_button_wrap span{width: 50px; text-align: center}
 
 .qr_code_wrap{width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;}

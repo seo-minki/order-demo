@@ -238,25 +238,25 @@ const ProductOptionsPopup = (props) => {
                             {optionGroupList()}
                             <p className="options_title">요청사항</p>
                             <textarea maxLength={30} value={memo} onChange={handelMemo}></textarea>
-
-                            <div className="order_button_wrap">
-                                <div className="quantity_button_wrap">
-                                    <button onClick={() => totalQuantityHandler("minus")}>-</button>
-                                    <span>{totalQuantity}</span>
-                                    <button onClick={() => totalQuantityHandler("plus")}>+</button>
-                                </div>
-                                <p>₩{totalPrice}</p>
-                                <div className="button_wrap">
-                                    {/*<button disabled={disableButton()} onClick={() => saveSession()}>담기</button>*/}
-                                    <button disabled={disableButton()} onClick={() => order()}>주문하기</button>
-                                </div>
-
-                            </div>
                         </div> :
                         <div className="qr_code_wrap">
                             <QRCodeSVG value={billURL} width={300} height={300}></QRCodeSVG>
                         </div>
                     }
+                    {billURL ? <></> :
+                    <div className="order_button_wrap">
+                        <div className="quantity_button_wrap">
+                            <button onClick={() => totalQuantityHandler("minus")}>-</button>
+                            <span>{totalQuantity}</span>
+                            <button onClick={() => totalQuantityHandler("plus")}>+</button>
+                        </div>
+                        <p>₩{totalPrice}</p>
+                        <div className="button_wrap">
+                            {/*<button disabled={disableButton()} onClick={() => saveSession()}>담기</button>*/}
+                            <button disabled={disableButton()} onClick={() => order()}>주문하기</button>
+                        </div>
+
+                    </div>}
                 </div>
             </div>
         </div>
